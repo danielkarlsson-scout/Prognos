@@ -8,7 +8,7 @@
 	 */
 	function get_avdelningar_letare($lang, $empty="")	{
 		
-		$letare = array("Bävrarna", "", "");
+		$letare = array("Familjescouter (3 - 7 år)", "", "");
 		
 		if ('empty'==$empty)	{
 			$letare = scoutnet_remove_empty_elements($letare);
@@ -28,7 +28,7 @@
 	 */
 	function scoutnet_get_letare_calc($avdelning_index)	{
 		
-		$letare = array("W", "", "","", "", "", "", "", "");
+		$letare = array("", "", "","", "", "", "", "", "");
 		return $letare[$avdelning_index];
 	}
 	/******************/
@@ -38,7 +38,7 @@
 	 */
 	function get_avdelningar_sparare($lang, $empty="")	{
 		
-		$sparare = array("", "Insekterna", "Gnagarna", "");
+		$sparare = array("Spårare (8 - 9 år)", "", "", "");
 		
 		if ('empty'==$empty)	{
 			$sparare = scoutnet_remove_empty_elements($sparare);
@@ -52,7 +52,7 @@
 	
 	function scoutnet_get_sparare_calc($avdelning_index)	{
 		
-		$sparare = array("", "Bävrarna/2+", "Bävrarna/2-","", "", "", "", "", "");
+		$sparare = array("", "Spårare (8 - 9 år)/2+", "Spårare (8 - 9 år)/2-","", "", "", "", "", "");
 		return $sparare[$avdelning_index];
 	}
 	
@@ -62,7 +62,7 @@
 	 */
 	function get_avdelningar_upptackare($lang, $empty="")	{
 		
-		$upptackare = array("", "Asarna", "Skogsbrynet","", "", "", "", "", "");
+		$upptackare = array("", "Upptäckare (10 - 11 år)", "","", "", "", "", "", "");
 		
 		if ('empty'==$empty)	{
 			$upptackare = scoutnet_remove_empty_elements($upptackare);
@@ -176,3 +176,4 @@
 	}
 
 ?>
+
