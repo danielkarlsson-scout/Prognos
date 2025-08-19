@@ -25,7 +25,7 @@ jobs:
 
       - name: Skriv config
         run: |
-          cp scoutnet_basic_config.php scoutnet_basic_config.php
+          cp scoutnet_basic_config.php scoutnet_prognosis_config.php
           sed -i "s/YOUR_API_KEY/${{ secrets.SCOUTNET_API_KEY }}/" scoutnet_basic_config.php
           sed -i "s/YOUR_CORPS_ID/${{ secrets.SCOUTNET_CORPS_ID }}/" scoutnet_basic_config.php
 
