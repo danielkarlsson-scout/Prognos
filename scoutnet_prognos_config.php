@@ -8,7 +8,7 @@
 	 */
 	function get_avdelningar_letare($lang, $empty="")	{
 		
-		$letare = array("Familjescouter (3 - 7 år)", "", "");
+		$letare = array("Familjescouter", "", "");
 		
 		if ('empty'==$empty)	{
 			$letare = scoutnet_remove_empty_elements($letare);
@@ -38,7 +38,7 @@
 	 */
 	function get_avdelningar_sparare($lang, $empty="")	{
 		
-		$sparare = array("Spårare (8 - 9 år)", "", "", "");
+		$sparare = array("Spårarscouter", "", "", "");
 		
 		if ('empty'==$empty)	{
 			$sparare = scoutnet_remove_empty_elements($sparare);
@@ -62,7 +62,7 @@
 	 */
 	function get_avdelningar_upptackare($lang, $empty="")	{
 		
-		$upptackare = array("", "Upptäckare (10 - 11 år)", "","", "", "", "", "", "");
+		$upptackare = array("", "Upptäckarscouter", "","", "", "", "", "", "");
 		
 		if ('empty'==$empty)	{
 			$upptackare = scoutnet_remove_empty_elements($upptackare);
@@ -87,7 +87,7 @@
 	 */
 	function get_avdelningar_aventyrare($lang, $empty="")	{
 		
-		$aventyrare = array("Äventyrare (12 - 15 år)", "", "", "", "");
+		$aventyrare = array("Äventyrarscouter", "", "", "", "");
 		
 		if ('empty'==$empty)	{
 			$aventyrare = scoutnet_remove_empty_elements($aventyrare);
@@ -112,8 +112,7 @@
 	 */
 	function get_avdelningar_utmanare($lang, $empty="")	{
 		
-		$utmanare = array("", "", "", "", "Utmanarna (15 - 18 år)
-", "", "");
+		$utmanare = array("", "", "", "", "Utmanarnscouter", "", "");
 		
 		if ('empty'==$empty)	{
 			$utmanare = scoutnet_remove_empty_elements($utmanare);
@@ -177,5 +176,6 @@
 	}
 
 ?>
+
 
 
