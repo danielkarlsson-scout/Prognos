@@ -9,13 +9,13 @@
 	Function to get the value of the kår-id from the option page
 	*/
 	function scoutnet_get_option_kar_id()	{
-		return 765;	
+		return 868;	
 	}
 	/*
 	Function to get the value of the api-nyckel Kår deltajerad from the option page
 	*/
 	function scoutnet_get_option_api_nyckel_kar_full()	{
-		return 'fyh5644680756j870e56e73745he5d38352f';
+		return 'a806055ce87fb077687947dda17d4deeb53431c1';
 	}
 		
 	/*
@@ -34,6 +34,7 @@
 			return json_decode($result, true);
 		}
 	}
+
 
 
 
