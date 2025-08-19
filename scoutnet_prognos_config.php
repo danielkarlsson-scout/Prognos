@@ -52,7 +52,7 @@
 	
 	function scoutnet_get_sparare_calc($avdelning_index)	{
 		
-		$sparare = array("", "Spårare (8 - 9 år)/2+", "Spårare (8 - 9 år)/2-","", "", "", "", "", "");
+		$sparare = array("", "", "","", "", "", "", "", "");
 		return $sparare[$avdelning_index];
 	}
 	
@@ -76,7 +76,7 @@
 	
 	function scoutnet_get_upptackare_calc($avdelning_index)	{
 		
-		$upptackare = array("", "Insekterna", "Gnagarna","", "", "", "", "", "");
+		$upptackare = array("", "", "","", "", "", "", "", "");
 		return $upptackare[$avdelning_index];
 	}
 	
@@ -87,7 +87,7 @@
 	 */
 	function get_avdelningar_aventyrare($lang, $empty="")	{
 		
-		$aventyrare = array("", "", "", "Stigfinnarna", "");
+		$aventyrare = array("Äventyrare (12 - 15 år)", "", "", "", "");
 		
 		if ('empty'==$empty)	{
 			$aventyrare = scoutnet_remove_empty_elements($aventyrare);
@@ -101,7 +101,7 @@
 	
 	function scoutnet_get_aventyrare_calc( $avdelning_index)	{
 		
-		$aventyrare = array("", "", "","Asarna+Skogsbrynet", "", "", "", "", "");
+		$aventyrare = array("", "", "","", "", "", "", "", "");
 		return $aventyrare[$avdelning_index];
 	}
 	
@@ -112,7 +112,8 @@
 	 */
 	function get_avdelningar_utmanare($lang, $empty="")	{
 		
-		$utmanare = array("", "", "", "", "Seniorerna", "", "");
+		$utmanare = array("", "", "", "", "Utmanarna (15 - 18 år)
+", "", "");
 		
 		if ('empty'==$empty)	{
 			$utmanare = scoutnet_remove_empty_elements($utmanare);
@@ -126,7 +127,7 @@
 	
 	function scoutnet_get_utmanare_calc( $avdelning_index)	{
 		
-		$utmanare = array("", "", "","", "Stigfinnarna", "", "", "", "");
+		$utmanare = array("", "", "","", "", "", "", "", "");
 		return $utmanare[$avdelning_index];
 	}
 	
@@ -137,27 +138,27 @@
 	function get_age_gren($args)	{
 		
 		if ('letare'==$args)	{
-			$min_year = 8;
-			$max_year = 8;
+			$min_year = 3;
+			$max_year = 7;
 			$antal_year = $max_year - $min_year + 1;
 		}
 		else if ('sparare'==$args)	{
-			$min_year = 9;
+			$min_year = 8;
 			$max_year = 10;
 			$antal_year = $max_year - $min_year + 1;
 		}
 		else if ('upptackare'==$args)	{
-			$min_year = 11;
+			$min_year = 10;
 			$max_year = 12;
 			$antal_year = $max_year - $min_year + 1;
 		}
 		else if ('aventyrare'==$args)	{
-			$min_year = 13;
+			$min_year = 12;
 			$max_year = 15;
 			$antal_year = $max_year - $min_year + 1;
 		}
 		else if ('utmanare'==$args)	{
-			$min_year = 16;
+			$min_year = 15;
 			$max_year = 18;
 			$antal_year = $max_year - $min_year + 1;
 		}
@@ -176,4 +177,5 @@
 	}
 
 ?>
+
 
