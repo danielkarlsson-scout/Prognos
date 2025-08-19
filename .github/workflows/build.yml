@@ -1,0 +1,40 @@
+name: Build Prognos
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 2 * * *"   # kör varje natt kl 02
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.1'
+
+      - name: Copy config with secrets
+        run: |
+          cp scoutnet_basic_config.php.example scoutnet_basic_config.php
+          sed -i "s/YOUR_API_KEY/${{ secrets.SCOUTNET_API_KEY }}/" scoutnet_basic_config.php
+          sed -i "s/YOUR_CORPS_ID/${{ secrets.SCOUTNET_CORPS_ID }}/" scoutnet_basic_config.php
+
+      - name: Run Prognos
+        run: php index.php > prognos.html
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: prognos
+          path: prognos.html
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .
+          publish_branch: gh-pages
